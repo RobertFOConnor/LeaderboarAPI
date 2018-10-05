@@ -1,0 +1,21 @@
+{
+  "hosting": {
+    "public": "leaderboard",
+    "rewrites": [
+      {
+        "source": "**",
+        "function": "app"
+      }
+    ],
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  },
+  "functions": {
+    "predeploy": [
+      "npm --prefix \"functions\" run lint"
+    ]
+  }
+}
